@@ -1,0 +1,10 @@
+.alert{
+    color: red;
+    font-weight: bolder;
+    background-color: lightpink;
+    padding: 15px;
+}
+button{
+    padding: 3px;
+    margin: 5px;
+}

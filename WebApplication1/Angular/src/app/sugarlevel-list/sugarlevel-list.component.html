@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-header style="font-weight:bold; font-size: 18px;">Sugar Level List</mat-card-header>
+  <mat-card-content>
+	<mat-list>
+  	<mat-list-item *ngFor="let sugarLevel of sugarLevels">
+    	<h3 mat-line>
+      	<a mat-button [routerLink]="['/sugarlevel-edit', sugarLevel.id]">({{sugarLevel.id}}) - {{sugarLevel.description}} Measured at: {{sugarLevel.measuredAt}} </a>
+    	</h3>
+  	</mat-list-item>
+	</mat-list>
+  </mat-card-content>
+
+	<button mat-fab color="primary" [routerLink]="['/sugarlevel-add']">Add</button>
+	<button mat-fab color="accent" [routerLink]="['']">Back</button>
+</mat-card>

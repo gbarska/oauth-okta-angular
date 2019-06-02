@@ -1,0 +1,6 @@
+*.dll
+
+WebApplication1/bin
+packages
+\WebApplication1/Angular/node_modules
+

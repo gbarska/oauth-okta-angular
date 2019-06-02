@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-header style="font-weight:bold; font-size: 18px;">Welcome to Sugar Level</mat-card-header>
+    <div *ngIf="!isAuthenticated && this.userLogin.getAuthenticationStatus()" [ngClass]="{alert : !isAuthenticated}">You must be authenticated to access app content!</div>
+    <br/>
+  <mat-card-content>
+    <button mat-raised-button color="warn" *ngIf="!isAuthenticated"
+            (click)="oktaAuth.loginRedirect()">
+      Login
+    </button>
+    <button mat-raised-button color="warn" *ngIf="isAuthenticated"
+            [routerLink]="['/sugarlevel-list']">
+      Sugar Level List
+    </button>
+    <button mat-raised-button color="warn" *ngIf="isAuthenticated"
+            (click)="oktaAuth.logout()">
+      logout
+    </button>
+  </mat-card-content>
+</mat-card>
